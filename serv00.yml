@@ -1,8 +1,8 @@
 name: Keep Servers Alive
 
 on:
-  schedule:
-   - cron: '0 */4 * * *' # 每4小时执行一次（私库每月500分钟运行时长，每天16分钟）
+  #schedule:
+  # - cron: '0 */4 * * *' # 每4小时执行一次（私库每月500分钟运行时长，每天16分钟）
   workflow_dispatch: 
 
 jobs:
@@ -17,8 +17,7 @@ jobs:
     # 每行一个{serv00服务器}，一个服务也可，末尾用,间隔，最后一个服务器末尾无需用,间隔
       ACCOUNTS: >
         [
-        {"RES":"n", "REP":"n", "SSH_USER":"你的serv00账号名", "SSH_PASS":"你的serv00账号密码", "REALITY":"你serv00账号名.serv00.net", "SUUID":"自设UUID", "TCP1_PORT":"vless的tcp端口", "TCP2_PORT":"vmess的tcp端口", "UDP_PORT":"hy2的udp端口", "HOST":"s1.serv00.com", "ARGO_DOMAIN":"", "ARGO_AUTH":""},
-        {"RES":"y", "REP":"y", "SSH_USER":"123456", "SSH_PASS":"7890000", "REALITY":"time.is", "SUUID":"73203ee6-b3fa-4a3d-b5df-6bb2f55073ad", "TCP1_PORT":"", "TCP2_PORT":"", "UDP_PORT":"", "HOST":"s16.serv00.com", "ARGO_DOMAIN":"你的argo固定域名", "ARGO_AUTH":"eyJhIjoiOTM3YzFjYWI88552NTFiYTM4ZTY0ZDQzRmlNelF0TkRBd1pUQTRNVEJqTUdVeCJ9"} 
+        {"RES":"n", "REP":"n", "SSH_USER":"gba3455", "SSH_PASS":"2EsW2eTzP5$jj&etg9fg", "REALITY":"gba3455.serv00.net", "SUUID":"", "TCP1_PORT":"", "TCP2_PORT":"", "UDP_PORT":"", "HOST":"s11.serv00.com", "ARGO_DOMAIN":"serv00.gba3455.eu.org", "ARGO_AUTH":"eyJhIjoiYmEzMWFkMmM1ZWMyOGRjNDBkZjhiODRiZDg1MzYzMTgiLCJ0IjoiNTQ1YTNlZjMtMTI2My00Mzc4LTg5NzctYjZiZWYzNWE3YmYyIiwicyI6Ik5UWmlaR0V5TWpndFpXRTJaUzAwTkRGaExXRTFOR1F0WlRabU5tWmtaamt5WlRNeiJ9"}
         ]
     steps:
       - name: Checkout Repository
